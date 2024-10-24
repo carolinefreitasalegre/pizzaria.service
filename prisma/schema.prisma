@@ -1,0 +1,31 @@
+// Prisma schema file
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Pizza {
+  id          Int     @id @default(autoincrement())
+  sabor       String
+  quantidade  Int
+  valor       Float
+}
+
+model Snack {
+  id          Int     @id @default(autoincrement())
+  sabor       String
+  quantidade  Int
+  valor       Float
+}
+
+model Drink {
+  id          Int     @id @default(autoincrement())
+  sabor       String
+  quantidade  Int
+  valor       Float
+}

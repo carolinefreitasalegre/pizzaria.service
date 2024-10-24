@@ -25,7 +25,7 @@
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
+Este é o backend do projeto Buona Mazza Pizzaria, responsável pelos serviços de busca de produtos, adição de itens e processamento de pagamentos no site.
 ## Project setup
 
 ```bash

@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from 'prisma/prisma.service';
-import { ProductPizzaDto } from '../dto/product-pizza.dto';
+import { ProductDrinkDto } from '../dto/product-drinks.dto';
 
 @Injectable()
-export class GetAllProductsService {
+export class GetAllProductsDrinksService {
   constructor(private readonly prismaService: PrismaService) {}
 
-  async execute(): Promise<ProductPizzaDto[]> {
+  async execute(): Promise<ProductDrinkDto[]> {
     return this.prismaService.pizza.findMany();
   }
 }

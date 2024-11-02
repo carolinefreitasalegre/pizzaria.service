@@ -8,14 +8,7 @@ export class AddProductPizzaService {
   constructor(private prisma: PrismaService) {}
 
   async execute(data: Prisma.PizzaCreateInput): Promise<ProductPizzaDto> {
-    const dados = await this.prisma.pizza.create({
-      data: {
-        sabor: data.sabor,
-        quantidade: data.quantidade,
-        valor: data.valor,
-      },
-    });
-    console.log(dados);
+    await this.prisma.pizza.create({ data });
     return;
   }
 }
